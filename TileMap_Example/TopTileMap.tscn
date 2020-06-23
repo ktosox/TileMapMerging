@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://TopTileMap.gd" type="Script" id=1]
+[ext_resource path="res://new_tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://Room1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Room2.tscn" type="PackedScene" id=4]
+
+[node name="TopTileMap" type="TileMap"]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 24, 0, 327686, 65548, 0, 327686, 65556, 0, 327686, 131080, 0, 327686, 262152, 0, 327686, 262164, 0, 327686, 262167, 0, 327685, 327692, 0, 327686, 327703, 0, 262144, 393224, 0, 327686, 393239, 0, 327683, 1048591, 0, 327686, 1048594, 0, 327686, 1048601, 0, 327685, 1114137, 0, 327683 )
+script = ExtResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+zoom = Vector2( 0.5, 0.5 )
+
+[node name="Room1-1" parent="." instance=ExtResource( 3 )]
+position = Vector2( 16, 16 )
+
+[node name="Room1-2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 208, -16 )
+
+[node name="Room1-3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 384, 0 )
+
+[node name="Room2-1" parent="." instance=ExtResource( 4 )]
+position = Vector2( 48, 144 )
+
+[node name="Room2-2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 192, 112 )
+
+[node name="Room2-3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 352, 128 )
